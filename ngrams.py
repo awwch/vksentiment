@@ -49,18 +49,3 @@ freq_ngrams = Counter(f).most_common()
 with open('common 2-grams.txt','w',encoding = 'utf-8') as f:
     for line in freq_ngrams:
         f.write(str(line)+'\n')
-
-
-#import pymorphy2
-#morph = pymorphy2.MorphAnalyzer()
-#for element in freq_ngrams:
- #   for word in element[0]:
-  #      word = re.sub('[^А-яЁ]',' ',word)
-   #     p = morph.parse(word)[0]
-    #    gram_info = str(p.tag)
-     #   if 'PREP' in gram_info or 'CONJ'in gram_info or 'NPRO' in gram_info or word == '':
-      #      try:
-       #         freq_ngrams.remove(element)
-        #    except ValueError:
-         #       continue
-            
